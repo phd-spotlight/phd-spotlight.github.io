@@ -38,8 +38,9 @@ before making further speculative design changes.
 - Exact times remain to be announced; the program is a draft.
 - Purpose: PhD students present research through posters and short talks;
   students can discover research, find thesis ideas, and meet researchers.
-- Program: keynote talks (3–4 talks of 10–15 minutes), lightning pitches,
-  poster session, and refreshments.
+- Program: either keynote talks (3–4 talks of 10–15 minutes) or lightning
+  pitches, followed by the poster session and refreshments. Keynotes and pitches
+  are mutually exclusive alternatives; the format remains to be confirmed.
 - Organized by the PhD student representatives.
 
 Keep the institution explicit in the hero, About section, search description,
@@ -49,7 +50,9 @@ Do not invent exact times, a venue, speakers, or deadlines.
 The website copy is in English. There are separate Google Forms for **Attend**
 and **Present a poster**, each linked in both the hero and Join section. Preserve
 the existing form URLs in `index.html` and keep duplicate links synchronized.
-Keynotes are selected from poster submissions, as described in the Join section.
+If the keynote format is chosen, speakers are selected from poster submissions,
+as described in the Join section. Do not imply that keynotes are confirmed or
+list keynotes and lightning pitches as two separate scheduled sessions.
 
 ## Visual design and hero typography
 
@@ -80,14 +83,15 @@ order. The order and exact course/representation text are:
 
 | Name | PhD course | Representation |
 | --- | --- | --- |
+| Alessio Cascione | National PhD in Artificial Intelligence | Representative at the PhD Steering Committee |
 | Malio Li | PhD in Computer Science | Representative at the PhD Steering Committee |
 | Luca Miglior | PhD in Computer Science | Representative at the Department Council |
 | Matteo Tolloso | National PhD in Artificial Intelligence | Representative at the Department Council |
 | Calogero Turco | PhD in Computer Science | Representative at the PhD Steering Committee |
 
-Spell out **Artificial Intelligence** for Matteo; do not shorten it to AI.
+Spell out **Artificial Intelligence** for Alessio and Matteo; do not shorten it to AI.
 Keep the PhD course distinct from the body on which the person represents students.
-All four representation descriptions start with **Representative at the**.
+All five representation descriptions start with **Representative at the**.
 
 Each organizer has three stacked text elements:
 
@@ -108,6 +112,10 @@ The asset is still the full photograph; `.avatar-malio` and its nested image
 provide the close framing through CSS. Preserve this framing when changing image
 sizes. Do not restore the original root-level copy. Other photos are named
 `luca-miglior.jpg`, `matteo-tolloso.jpg`, and `calogero-turco.jpg` in the same folder.
+
+Alessio's photograph is `assets/organizers/alessio-cascione.jpg`, downloaded from
+`https://acascione.github.io/profile.webp` (the source serves JPEG data despite
+its extension). His name links to his personal website, https://acascione.github.io/.
 
 ## GoatCounter and sharing links
 
