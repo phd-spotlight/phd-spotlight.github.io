@@ -25,7 +25,7 @@ when a browser is available, especially long organizer descriptions. Check local
 asset references and registration links after relevant edits. Do not add tests
 that merely duplicate static copy, or claim browser validation if none was done.
 
-The stylesheet currently uses a version query in `index.html` (`style.css?v=5`).
+The stylesheet currently uses a version query in `index.html` (`style.css?v=6`).
 Increment it when changing CSS if needed to prevent stale cached styles. If a
 reported visual change is missing, inspect the loaded stylesheet and deployment
 before making further speculative design changes.
@@ -34,7 +34,7 @@ before making further speculative design changes.
 
 - Name: **PhD Spotlight 2026**.
 - Institution: **Department of Computer Science, University of Pisa**.
-- Date: **Thursday, November 19, 2026**, in the afternoon.
+- Date: **Monday, November 23, 2026**, in the afternoon.
 - Exact times remain to be announced; the program is a draft.
 - Purpose: PhD students present research through posters and short talks;
   students can discover research, find thesis ideas, and meet researchers.
@@ -70,6 +70,10 @@ The following are two separate text blocks with visibly distinct typography:
 2. **Tagline:** “Discover the research, meet the people doing it.” Keep this in a
    separate `.lead` paragraph. Current styling is Georgia italic, 24–34 px,
    gold, with a line break after “research,” and a thin gold divider above it.
+
+The hero date (`.meta`) is a third, distinct element: a pill-shaped badge with
+a thin gold border, Inter 13 px semibold, uppercase with wide letter spacing,
+light text with the date itself in gold. It replaced plain gold Inter text.
 
 The user explicitly wants these two sentences to look different, not merely
 parts of a single paragraph. Do not split the institutional sentence into a stack
