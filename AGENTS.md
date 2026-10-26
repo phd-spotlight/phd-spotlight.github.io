@@ -25,7 +25,7 @@ when a browser is available, especially long organizer descriptions. Check local
 asset references and registration links after relevant edits. Do not add tests
 that merely duplicate static copy, or claim browser validation if none was done.
 
-The stylesheet currently uses a version query in `index.html` (`style.css?v=4`).
+The stylesheet currently uses a version query in `index.html` (`style.css?v=5`).
 Increment it when changing CSS if needed to prevent stale cached styles. If a
 reported visual change is missing, inspect the loaded stylesheet and deployment
 before making further speculative design changes.
@@ -56,9 +56,10 @@ list keynotes and lightning pitches as two separate scheduled sessions.
 
 ## Visual design and hero typography
 
-Retain the dark navy background, warm gold accents, spotlight animation, and
-responsive layout. Preserve keyboard focus indicators, meaningful image alt text,
-and reduced-motion support.
+Retain the dark navy background, warm gold accents, the three animated
+spotlights (a centre beam plus dimmer left and right beams with independent
+timing), and responsive layout. Preserve keyboard focus indicators, meaningful
+image alt text, and reduced-motion support.
 
 The following are two separate text blocks with visibly distinct typography:
 

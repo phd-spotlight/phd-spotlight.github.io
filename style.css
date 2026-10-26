@@ -53,11 +53,20 @@ body {
   z-index: -1;
 }
 
-/* Moving spotlight */
+/* Moving spotlights: three lamps, each with its own position, pace and phase */
+.beam, .pool {
+  --x: 50%;
+  --dur: var(--sweep);
+  --delay: 0s;
+  --strength: 1;
+}
+.spot-left  { --x: 14%; --dur: 11s; --delay: -4s; --strength: 0.7; }
+.spot-right { --x: 86%; --dur: 13s; --delay: -9s; --strength: 0.7; }
+
 .beam {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: var(--x);
   width: 200vmax;
   height: 200vmax;
   margin-left: -100vmax;
@@ -69,8 +78,9 @@ body {
       transparent 36deg 360deg);
   filter: blur(8px);
   transform-origin: 50% 0;
-  animation: sweep var(--sweep) ease-in-out infinite alternate,
-             flicker 4s ease-in-out infinite;
+  opacity: var(--strength);
+  animation: sweep var(--dur) ease-in-out var(--delay) infinite alternate,
+             flicker 4s ease-in-out var(--delay) infinite;
   pointer-events: none;
   z-index: -1;
 }
@@ -89,7 +99,7 @@ body {
 .pool {
   /* light hitting the floor, follows the beam */
   position: absolute;
-  left: 50%;
+  left: var(--x);
   bottom: 2vh;
   width: 70vh;
   height: 22vh;
@@ -97,7 +107,8 @@ body {
   border-radius: 50%;
   background: radial-gradient(ellipse at center, rgba(255, 210, 120, 0.22), transparent 65%);
   filter: blur(10px);
-  animation: follow var(--sweep) ease-in-out infinite alternate;
+  opacity: var(--strength);
+  animation: follow var(--dur) ease-in-out var(--delay) infinite alternate;
   pointer-events: none;
   z-index: 0;
 }
@@ -111,8 +122,8 @@ body {
   to   { transform: translateX(36vh); }
 }
 @keyframes flicker {
-  0%, 100% { opacity: 1; }
-  50%      { opacity: 0.82; }
+  0%, 100% { opacity: var(--strength); }
+  50%      { opacity: calc(var(--strength) * 0.82); }
 }
 
 .hero-inner {
