@@ -228,8 +228,14 @@ State checked on 2026-11-05. Re-verify before acting on it.
   - A decisive check from outside the network (for example a phone on mobile
     data): `curl -skI https://phdspotlight.di.unipi.it | grep -i server`.
     `Apache` means the University server; `GitHub.com` means Pages.
-  - The observation that port 80 resets the connection was made from inside
-    the University network and may not hold from outside.
+  - Over plain HTTP the TCP connection opens, but it is reset as soon as the
+    request is sent (seen again on 2026-11-05 after the redeploy). So
+    `http://phdspotlight.di.unipi.it` does not work and only `https://`
+    does, with the certificate warning. This is server or network
+    configuration, outside the hosting account: an `.htaccess` cannot fix it,
+    because Apache never answers. Checked only from inside the University
+    network. `www.phdspotlight.di.unipi.it` has no DNS record, although the
+    certificate lists it.
 - Jacopo says the expired certificate "should not bother us". It does not
   affect GitHub Pages builds. Visitors still see a full-page browser warning,
   which they can bypass manually because there is no HSTS header. At least from
@@ -277,7 +283,11 @@ State checked on 2026-11-05. Re-verify before acting on it.
 - `--delete-during` and `rclone sync` delete server files that are not in the
   build. Deploying a new site this way would remove the 2024 archive unless the
   2024 content is in the build.
-- Jacopo sent SSH credentials privately. **Never write SSH usernames,
+- Jacopo sent SSH credentials privately. On the user's machine (`dgx-a100-2`)
+  they are stored outside the repository in
+  `~/.config/phd-spotlight/server.env` (mode 600: host, user, password,
+  document root), and in the rclone remote `PHDSPOTLIGHT`. Read them from
+  there when needed. **Never write SSH usernames,
   passwords, or other credentials into this repository**: it is public, and
   GitHub Pages serves every file in it, including `AGENTS.md`. Because the
   password was shared in chat, it would be sensible to change it.
@@ -351,10 +361,12 @@ State checked on 2026-11-05. Re-verify before acting on it.
     department server. Publish to the server with `make publish` from here.
 - **Fix prepared on 2026-11-05**: the first edition was rebuilt into
   `first-edition/` here. The footer link (`/first-edition/`, relative) works
-  on both hosts, and the date fix and Makefile are included. Uploading it to
-  the server was blocked for Claude (production deploy), so the user runs
-  `make publish`. Afterwards, the user may move `/web/first-version/stats`
-  back to `/web/stats` and delete the obsolete broken `/web/first-version/`.
+  on both hosts, and the date fix and Makefile are included. Claude was not
+  allowed to deploy, so the user pushed and ran `make publish`, then moved
+  `stats` back to `/web/stats` and deleted `/web/first-version/`. Verified
+  on 2026-11-05: `/first-edition/` (pages, CSS, PDFs) and `/stats/` return
+  200 on both hosts, and both show November 30. The rclone remote
+  `PHDSPOTLIGHT` is configured on the user's machine (`dgx-a100-2`).
 - The copy on `phdspotlight.di.unipi.it` is secondary. Before sharing that
   address, the certificate must be renewed (through the
   University/department IT that manages `webhost2.sid.unipi.it`). If a mirror is
