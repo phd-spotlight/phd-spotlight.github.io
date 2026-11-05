@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PhD Spotlight</title>
+    <description>PhD Spotlight - From Study to Research
+</description>
+    <link>/first-edition/</link>
+    <atom:link href="/first-edition/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 05 Nov 2026 14:37:41 +0100</pubDate>
+    <lastBuildDate>Thu, 05 Nov 2026 14:37:41 +0100</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>End-User Development for Adaptive Social Robot</title>
+        <description>&lt;p&gt;This doctoral research explores the development of an End-User Development framework for adaptive social robots, focusing on enabling non-expert users to create and customise robotic behaviours for social and assistive contexts. The study addresses critical challenges in Human-Robot Interaction, such as the difficulties non-expert users face in programming robots, issues related to the acceptance of robots, and the lack of systems that are flexible across different contexts of use. The envisioned system will include multimodal interfaces, combining visual programming with natural language inputs, allowing users to program the humanoid robot, Pepper, without requiring technical expertise. The envisioned framework emphasises adaptability and empathetic interaction, enabling the robot to modify its behaviour based on user characteristics and the surrounding social environment. A modular approach has been conceived to allow users to combine pre-designed behaviour primitives to create complex, personalised activities. The system will also incorporate large language models to support natural language programming, providing an approach still underexplored in end-user robotic programming.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Nov 2024 00:00:00 +0100</pubDate>
+        <link>/first-edition/vaiani/</link>
+        <guid isPermaLink="true">/first-edition/vaiani/</guid>
+        
+        
+        <category>Human-Computer Interaction</category>
+        
+      </item>
+    
+      <item>
+        <title>Efficient Deep Learning on Graphs</title>
+        <description>&lt;p&gt;Graphs are an effective representation of entities and relations of many different objects such as chemical compounds, protein interaction networks, social or citation networks, and other complex structured data. Deep learning proved effective in tackling a wide range of learning tasks, including tasks on structured data, thanks to the ability of learning a hierarchy of representations in the several neural network layers without requiring human engineering. However, deep learning brought several challenges, both in terms of efficiency and effectiveness. The increase in available data - both as large collections of graphs and as large-scale network graphs - requires an increase in model complexity, which in turn leads to an exponential increase in hyper-parameter space to be searched during model selection; the need for efficiency both in training models and selecting models is evident. Training effective deep neural networks is also challenging, due to difficulties encountered e.g. by gradient back-propagation through a large number of layers in end-to-end training. In graph learning, these problems are exacerbated by other peculiar issues such as over-smoothing and over-squashing, which impair the ability of deep neural networks for graphs to learn meaningful representations. My research has investigated two directions for building efficient and effective graph neural models: constructive approaches, which incrementally build a graph neural model, adapting its size to the task; reservoir computing approaches, which exploit random parameter initialization satisfying certain constraints to realize graph embeddings without training.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Nov 2024 00:00:00 +0100</pubDate>
+        <link>/first-edition/tortorella/</link>
+        <guid isPermaLink="true">/first-edition/tortorella/</guid>
+        
+        
+        <category>Machine Learning on Graphs, Deep Neural Networks, Reservoir Computing</category>
+        
+      </item>
+    
+      <item>
+        <title>Think Like a Vertex!</title>
+        <description>&lt;p&gt;We explore key challenges in graph problems, focusing on solutions using decentralized algorithms. We present the methodology to be used for developing such algorithms, allowing scalable, efficient processing even in large and dynamic graphs.
+Examples include routing optimization in telecommunications, sensor network coordination, and social network analysis, where decentralized approaches can improve performance and resilience. 
+Think like a vertex!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Nov 2024 00:00:00 +0100</pubDate>
+        <link>/first-edition/rucci/</link>
+        <guid isPermaLink="true">/first-edition/rucci/</guid>
+        
+        
+        <category>Graph Algorithms, Distributed Computing, Combinatorics</category>
+        
+      </item>
+    
+      <item>
+        <title>A Causal Framework for Deferring Systems</title>
+        <description>&lt;p&gt;The work bridges Learning to Defer (L2D) - an extension of supervised learning where the prediction task can be deferred to a human - and the causal framework of Potential Outcomes. 
+This allows one to identify and estimate the causal effect of introducing a deferring system on the predictive performance.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Nov 2024 00:00:00 +0100</pubDate>
+        <link>/first-edition/pugnana/</link>
+        <guid isPermaLink="true">/first-edition/pugnana/</guid>
+        
+        
+        <category>Causality, Trustworthy AI, Human-Computer Interaction</category>
+        
+      </item>
+    
+      <item>
+        <title>AI-based approaches for mobility data sharing and human dynamics understanding</title>
+        <description>&lt;p&gt;Our research aims to enhance mobility data sharing by developing AI-driven methods for creating, representing, and analyzing mobility data enriched with semantic information, such as points of interest, transportation means, and weather conditions. We focus on three key areas: integrating diverse mobility and location data to create unified representations of urban regions, encoding user trajectories to provide context-rich yet compact data summaries, and using generative AI to synthesize realistic urban data when real data is limited. These approaches promise to improve urban planning, support sustainable development, and enable data-informed decision-making that benefits citizens and communities.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Nov 2024 00:00:00 +0100</pubDate>
+        <link>/first-edition/pugliese/</link>
+        <guid isPermaLink="true">/first-edition/pugliese/</guid>
+        
+        
+        <category>Mobility Data Mining</category>
+        
+      </item>
+    
+      <item>
+        <title>Quantum Artificial Intelligence</title>
+        <description>&lt;p&gt;Hybrid Methods for Unsupervised Quantum Artificial Intelligence.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Nov 2024 00:00:00 +0100</pubDate>
+        <link>/first-edition/poggiali/</link>
+        <guid isPermaLink="true">/first-edition/poggiali/</guid>
+        
+        
+        <category>Quantum Computing</category>
+        
+      </item>
+    
+      <item>
+        <title>Knowledge Representation in Reinforcement Learning</title>
+        <description>&lt;p&gt;A common characteristic of modern Deep Learning approaches is that they involve training models “from scratch” to solve specific tasks. This approach, while effective, poses significant challenges especially in the field of Reinforcement Learning (RL) leading to unsustainable computational efforts. In fact, RL agents must learn optimal policies without any prior knowledge, leveraging only their experience with the world. Furthermore, lifelong learning agents continually adapt to different scenarios and objectives over time. In most cases, these challenges are dealt with without exploiting previously learned skills or policies to a meaningful extent. The following poster aims at presenting a distinctive perspective on how to address these challenges by redefining the concept of skills within the RL framework.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Nov 2024 00:00:00 +0100</pubDate>
+        <link>/first-edition/piccoli/</link>
+        <guid isPermaLink="true">/first-edition/piccoli/</guid>
+        
+        
+        <category>Reinforcement Learning</category>
+        
+      </item>
+    
+      <item>
+        <title>Causal Models - Learning, Representation and Abstraction</title>
+        <description>
+</description>
+        <pubDate>Mon, 11 Nov 2024 00:00:00 +0100</pubDate>
+        <link>/first-edition/massidda/</link>
+        <guid isPermaLink="true">/first-edition/massidda/</guid>
+        
+        
+        <category>Causality</category>
+        
+      </item>
+    
+      <item>
+        <title>ECLYPSE - Simplifying Cloud-Edge Simulations with Python</title>
+        <description>&lt;p&gt;ECLYPSE is a versatile Python-based platform designed for simulating and emulating complex Edge-Cloud environments, addressing key challenges in distributed computing, including resource management, service placement, and network variability. Unlike traditional simulation-only tools, ECLYPSE enables developers to run realistic emulations of actual application implementations, allowing for highly accurate testing under near-real-world conditions.&lt;/p&gt;
+
+&lt;p&gt;With its modular architecture, ECLYPSE supports customizable deployment strategies, adaptive workload management, and event-driven updates - ideal for applications in smart cities, IoT, and real-time analytics. 
+Through Python’s extensive library ecosystem, ECLYPSE provides flexible integration with various backends, making it a powerful tool for advancing Edge-Cloud research and practical deployments.&lt;/p&gt;
+
+&lt;p&gt;Future directions include enhanced network transmission logging, benchmark factories, and infrastructure characterization for mobility, energy-awareness, and operational cost modeling.
+If you are interested in contributing to ECLYPSE, drop us &lt;a href=&quot;mailto:valerio.decaro@di.unipi.it,jacopo.massa@di.unipi.it?subject=[ECLYPSE]%20Contribution%20Request&quot;&gt;an email!&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Nov 2024 00:00:00 +0100</pubDate>
+        <link>/first-edition/massa/</link>
+        <guid isPermaLink="true">/first-edition/massa/</guid>
+        
+        
+        <category>Cloud Computing</category>
+        
+      </item>
+    
+      <item>
+        <title>Approximate Nearest Neighbors Search  over Neural Embeddings</title>
+        <description>&lt;p&gt;Similarity Search is a key search paradigm in our era. Large language models allows us to produce vectors representing data. 
+Nearest Neighbors Search aims to efficiently and effectively query these vectors using simple similarity measures.
+Interested research areas include LLMs,  kNN search  and models and vectors compression.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Nov 2024 00:00:00 +0100</pubDate>
+        <link>/first-edition/martinico/</link>
+        <guid isPermaLink="true">/first-edition/martinico/</guid>
+        
+        
+        <category>LLMs, information retrieval, nearest neighbors search, algorithms</category>
+        
+      </item>
+    
+  </channel>
+</rss>
