@@ -397,11 +397,25 @@ State checked on 2026-11-05. Re-verify before acting on it.
 - Who among the `sid.unipi.it` hosting administrators can renew the TLS
   certificate for `phdspotlight.di.unipi.it` (ISPConfig, possibly with
   Let's Encrypt)? The account cannot do it.
-- Are the rclone secrets in `di-unipi/phd-spotlight` still valid, and will
-  Jacopo or the department keep running the deployment? Without them,
-  deploying means `rsync`/`scp` over SSH.
-- Should the 2026 site be mirrored to the department domain before
-  30 November 2026, or only archived there after the event?
+- Ask the same administrators to make port 80 answer with a redirect to
+  HTTPS. Today `http://` resets the connection.
+- **To evaluate (not done):** mirror this repository into
+  `di-unipi/phd-spotlight`. Its `main` (`776015a`) is a stale copy of the 2026
+  site: November 23 in `datetime` and meta, no `first-edition/`, and a Makefile
+  without it. Risks while it stays stale: running `make publish` from it would
+  overwrite the server with the old version, and a DNS switch to GitHub would
+  make it live with a broken first-edition link. Possible approach, after
+  agreeing with Jacopo:
+  `git push di-unipi main:main --force-with-lease=main:776015a`. This replaces
+  that repository's `main` history and keeps its `first-edition` branch.
+  Lighter alternative: ask Jacopo not to publish from it, and align it only
+  before any DNS change.
+- DNS change to GitHub Pages (Jacopo plans to ask for it). It would fix the
+  certificate, HTTP and automatic deployment together, and requires the
+  `di-unipi` mirror (or this repository's custom domain) to be set up first.
+- Ask Jacopo to change the server password: it was shared in chat.
+- After the event: export the 2026 poster submissions from the Google Form
+  into the same fields as the 2024 posters, with presenters' consent.
 
 ## Maintaining this guidance
 
